@@ -1,4 +1,12 @@
 pandas
 numpy 
 seaborn
+torch
+torchvision
+torchsummary
+opencv-python
+matplotlib
+Pillow
+IPython
+tqdm
 -e .

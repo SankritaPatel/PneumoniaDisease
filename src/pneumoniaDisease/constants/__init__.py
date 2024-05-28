@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import List
+import torch
 
 TIMESTAMP: datetime = datetime.now().strftime("%m_%d_%Y_%H_%M_%S")
 
@@ -8,7 +9,7 @@ ARTIFACT_DIR: str = "artifacts"
 BUCKET_NAME: str = 'xraylungmages'
 S3_DATA_FOLDER: str = 'data'
 
-# data trasnforamtion
+# data trasnforamtion constants
 CLASS_LABEL_1: str = "NORMAL"
 CLASS_LABEL_2: str = "PNEUMONIA"
 BRIGHTNESS: int = 0.10
@@ -26,3 +27,11 @@ TEST_TRANSFORMS_FILE: str = "test_transforms.pkl"
 BATCH_SIZE: int = 2
 SHUFFLE: bool = False
 PIN_MEMORY: bool = True
+
+# Model Trainer Constants
+TRAINED_MODEL_DIR: str = "trained_model"
+TRAINED_MODEL_NAME: str = "model.pt"
+DEVICE: torch.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+STEP_SIZE: int = 6
+GAMMA: int = 0.5
+EPOCH: int = 1

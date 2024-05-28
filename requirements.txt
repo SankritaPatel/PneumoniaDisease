@@ -10,4 +10,5 @@ Pillow
 IPython
 tqdm
 joblib
+bentoml
 -e .

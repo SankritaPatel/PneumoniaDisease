@@ -35,9 +35,3 @@ DEVICE: torch.device = torch.device("cuda" if torch.cuda.is_available() else "cp
 STEP_SIZE: int = 6
 GAMMA: int = 0.5
 EPOCH: int = 1
-
-# Model Pusher Constants
-BENTOML_MODEL_NAME: str = "xray_model"
-BENTOML_SERVICE_NAME: str = "xray_service"
-BENTOML_ECR_URI: str = "xray_bento_image"
-PREDICTION_LABEL: dict = {"0":CLASS_LABEL_1, 1: CLASS_LABEL_2}
